@@ -1,10 +1,16 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
+//importing library random-name
+const random = require('random-name');
+
 const handler = async (event) => {
   try {
-    const subject = event.queryStringParameters.name || 'World'
+    //console.log(random());
+    //getting names from random library 
+    let nameFirst = random.first();
+    let nameLast = random.last();
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: `Hello from Tech-IZ ${subject}` }),
+      body: JSON.stringify({ message: `Hello from  ${nameFirst} ${nameLast}` }),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,

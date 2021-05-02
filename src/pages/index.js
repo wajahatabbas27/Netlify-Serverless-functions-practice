@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 export default function Home() {
 
   const [data, setData] = useState("");
+  console.log(data.message)
 
   useEffect(() => {
     console.log("UseEffect Called");
